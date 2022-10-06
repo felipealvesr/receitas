@@ -1,0 +1,1908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>365 Receitas</title>
+
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+
+    <!-- swiper slider css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.css"
+        integrity="sha512-m3pAvNriL711NMlhkZHK6K4Tu2/RjtrzyjxZU8mlAbxxoDoURy27KajN1LGTLeEEPvaN12mKAgSCrYEwF9y0jA=="
+        crossorigin="anonymous" />
+
+    <!-- custom style.css file -->
+   <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins&family=Roboto&display=swap');
+
+/* root styling */
+
+:root{
+    --light : #f8f9fa;
+    --secondary: #adb5bd;
+    --dark: #343a40;
+    --primary-color: #f15bb5;
+    --secondary-color: #2ec4b6;
+    --border : #e9ecef;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+.fa-bars:before {
+    color: white;
+    font-size: 30px;
+}
+
+.botao{
+  margin-top: 5px;
+  padding: 5px 5px 5px 15px;
+  font-size: 16px;
+  margin-bottom: 3px;
+  background-color: var(--light);
+  border-radius: 5px;
+  border-left: 4px #bcff80 solid;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+
+  box-shadow: 2px 5px 9px 0 rgb(0 0 0 / 7%);
+}
+
+a{
+    text-decoration: none;
+}
+
+* > *{
+    box-sizing: border-box;
+}
+/*lista pesquisa*/
+.item-ul{
+    overflow-y: auto;
+   
+    text-align: left;
+    font-size: 13px;
+    padding: 0px 10px 10px 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.item-li{
+    margin: 10px auto;
+    border-radius: 2px;
+    border-left: 4px #bcff80 solid;
+    line-height: 1.5em;
+    
+    
+}
+
+.item-li a{
+    list-style: none;
+    padding: 5px 5px 5px 5px !important;
+    color: black;
+    border: none !important;
+   
+}
+/* fim lista pesquisa*/
+
+/* global styling */
+.text-light{
+    color: var(--light);
+}
+
+.text-secondary{
+    color: var(--secondary);
+}
+
+.text-dark{
+    color: #bcff80;
+}
+
+.text-primary{
+    color: #bcff80;
+}
+
+.bg-light{
+    background-color: var(--light);
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.img-fluid{
+    width: 100%;
+}
+
+.text-title{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+
+.secondary-title{
+    font-family: 'Poppins' , sans-serif;
+}
+
+.display-1{
+    font-size: 22px;
+}
+
+.display-2{
+    font-size: 16px;
+}
+
+.display-3{
+    font-size: 14px;
+}
+
+.text-center{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.btn{
+    padding: 15px 20px;
+    border: none;
+}
+
+.btn-primary{
+    border-radius: 4px;
+    background-color: var(--secondary-color);
+}
+
+.object-fit{
+    max-height: 120px;
+    height: 80px;
+    width: 80px;
+    object-fit: fill;
+}
+
+.d-flex{
+    display: flex;   
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.mt-2{
+    margin-top: 10px;
+}
+
+.mt-3{
+    margin-top: 50px;
+}
+
+.mb-3{
+    margin-bottom: 30px;
+}
+
+.m-0{
+    margin: 0;
+}
+
+.px-1{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.px-2{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.py-1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.py-2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.py-3{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.thumbnail{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: relative;
+    bottom: 50px;
+}
+
+.thumbnail2 {
+  width: 100%;
+  height: 214px;
+  object-fit: cover;
+}
+
+.rounded{
+    height: 120px;
+    width: 120px;
+    object-fit: fill;
+    border-radius: 99px;
+}
+
+.shadow{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+/* section styling */
+ 
+/* ------- Navigation Menu ---------- */
+.navbar{
+   /* position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;*/
+
+    border: none;
+    display: inline-table;
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    top: 0;
+    z-index: 10;
+    border-right: 1px solid rgba(255,255,255,.15);
+    text-align: center;
+}
+
+.sidebar-nav {
+    width: 250px !important;
+    height: 100%;
+    vertical-align: top;
+    padding: 60px 40px;
+}
+
+.nav-brand{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    font-size: 32px;
+}
+
+.collapse{
+    align-self: center;
+}
+
+.nav-link{
+    font-size: 18px;
+    margin: 12px;
+    color: var(--dark);
+    font-family: 'Poppins', sans-serif;
+}
+
+.margin74{
+    margin-top: -74px;
+}
+
+.margin9{
+    margin-top: 7%;
+}
+
+.margin46{
+  margin-top: 12%;
+}
+
+.nav-link:hover{
+    color: #bcff80;
+}
+
+.search-box{
+    display: inline;
+    border-right: 1px solid var(--secondary);
+    padding-right: 12px;
+    margin-right: 10px;
+}
+
+.toggle-button{
+    font-size: 21px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 31px;
+    margin: 8px 10px;
+    display: none;
+}
+
+.toggle-button:focus{
+    outline: none;
+}
+
+
+/* ------- .Navigation Menu ---------- */
+
+/* ----------- Main Section ---------- */
+
+#site-main{
+    margin-top: 8em;
+}
+
+#posts{
+    margin-bottom: 5em;
+}
+
+.grid{
+    margin: 0 auto;
+}
+
+.grid .grid-item{
+    width: calc(33.3333% - 20px);
+    margin-bottom: 3em;
+}
+
+/* ----------- .Main Section ---------- */
+
+/* ----------- footer ---------- */
+#footer{
+    padding-top: 4em;
+}
+
+#footer .feature-post .flex-item{
+    margin-bottom: 10px;
+}
+
+#footer .tags a{
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+#footer .copyrights{
+    padding: 11px 188px;
+    border-top: 2px solid var(--light);
+}
+
+
+/* ----------- .footer ---------- */
+
+/* ----------- article page ------- */
+
+#post{
+    position: relative;
+    bottom: 36px;
+    margin-bottom: 4em;
+}
+
+.justify{
+    text-align: justify;
+}
+
+.post-footer .post-author{
+    position: relative;
+    margin-top: 4em;
+    background-color: var(--light);
+}
+
+.post-footer .post-author::after{
+    background-color: white;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4em;
+    z-index: 0;
+}
+
+.post-footer .post-author .author-avatar{
+    margin: 0 auto;
+    margin-bottom: 1em;
+    position: inherit;
+    z-index: 1;
+}
+
+.post-footer .post-comments .reply{
+    padding-left: 7em;
+}
+
+.form-control{
+    width: 100%;
+    border: 2px solid var(--border);
+    padding: 1em;
+    font-size: 18px;
+    margin-right: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----------- .article page ------- */
+
+/* ----------- sidebar page ------- */
+
+.categories a{
+    padding: 5px 0px 5px 6px;
+    width: 200px;
+  font-size: 16px;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  border: 2px #bcff80 solid;
+  box-shadow: 2px 5px 9px 0 rgb(0 0 0 / 7%);
+  transition: 0.5s;
+}
+
+.categories a:hover{
+    background-color: #bcff80;
+   /* color: var(--light);*/
+   color: #ffffff;
+   box-shadow: 2px 5px 9px 0 rgb(0 0 0 / 7%);
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.1);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.1);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+/* ----------- .sidebar page ------- */
+
+/* ----------- sticky ------- */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.sticky + .content{
+    padding-top: 60px;
+}
+
+/* ----------- .sticky ------- */
+
+
+
+/* Media Query */
+
+.row{
+    display: flex;
+}
+
+.col-3{
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+    padding-right: 35px;
+}
+
+.col-8{
+    flex: 0 0 80%;
+    max-width: 80%;
+}
+
+.col-4{
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+@media (min-width : 1024px) and (max-width : 1440px){
+    #conteudo{
+        margin-left: 300px;
+    }
+    .category{
+        margin-left: 300px !important;
+    }
+
+}
+@media (max-width : 1024px){
+    .row{
+       flex-wrap: wrap;
+    }
+
+    .col-3{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .col-8{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-4{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .sidebar-nav {
+      width: 100%;
+       height: 10%;
+        vertical-align: top;
+        padding: 60px 20px;
+        position: relative;
+       
+    }
+    .margin46{
+        margin-top: 8%;
+    }
+
+}
+
+
+
+@media (max-width : 992px){
+    .navbar{
+        flex-direction: column;
+    }
+
+    #site-main{
+        margin-top: 14em;
+    }
+    .sidebar-nav {
+        width: 100% !important;
+       height: 10%;
+        vertical-align: top;
+        padding: 60px 40px 0px 40px;
+    }
+}
+
+@media (max-width : 768px){
+    .grid .grid-item{
+        width: calc(50% - 20px);
+    }
+
+    .col-3{
+        flex: 0 0 100%;
+        max-width: calc(100% - 50px);
+        padding-top: 40px 50px;
+    }
+    .sidebar-nav {
+        width: 100% !important;
+       height: 10%;
+        vertical-align: top;
+        padding: 60px 40px;
+        position:relative;
+        
+    }
+
+    .margin46 {
+      margin-top: 8% !important;
+  }
+}
+
+@media (max-width : 574px){
+    .search-bar input:focus, .search-bar input:valid {
+        border: 2px solid #FFFFFF !important;
+    }
+
+    .search-bar input:focus + .search-btn, .search-bar input:valid + .search-btn{
+        border: 2px solid #FFFFFF !important;
+    }
+    .categories {
+    height: 270px !important;
+    overflow-y: scroll;
+    }
+    #post{
+        bottom: 0;
+    }
+
+    .thumbnail{
+        bottom: 0;
+    }
+    .categories a{
+        padding: 5px 0px 5px 15px;
+        font-size: 16px;
+        margin-bottom: 3px;
+        color: #ffffff;
+        border-radius: 5px;
+        border: 2px #ffffff solid;
+        box-shadow: 2px 5px 9px 0 rgb(0 0 0 / 7%);
+        transition: 0.5s;
+    }
+    .toggle-button{
+        display: initial;
+    }
+    .nav-brand{
+        color: #FFF;
+        position: relative;
+        right: 55px;
+    }
+    .collapse{
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.8s cubic-bezier(0.51,-0.15, 0, 0.98);
+    }
+
+    .collapse .nav-link{
+        display: block;
+        text-align: left;
+        margin: 10px auto;
+    }
+
+    .search-box{
+        border-right: none;
+    }
+
+    .collapse-toggle{
+        max-height: 500px;
+    }
+
+    .grid .grid-item{
+        width: calc(100% - 20px);
+    }
+
+    #site-main{
+        margin-top: 15em;
+    }
+
+    .sidebar-nav {
+        width: 100% !important;
+       height: 10%;
+        vertical-align: top;
+        padding: 60px 20px;
+       /* margin-left: -17px;*/
+        position: fixed;
+        background-color: #a6e072;
+    }
+
+    .category {
+      margin-left: 0px !important;
+      text-align: justify !important;
+  }
+  .margin46 {
+    margin-top: 5% !important;
+  }
+  .sentiment-wrapper {
+    padding: 0 !important;
+}
+
+input[type=text] {
+  width: 175px !important;
+  }
+
+}
+
+li {
+    list-style-type: none;
+  }
+
+.ingrediente li {
+
+ list-style-type: disc;
+
+}
+
+.preparo li {
+
+list-style-type: decimal;
+
+}
+
+
+  /*accordion*/
+ 
+
+@mixin user-select() {
+  user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+@mixin chart($radius, $width) {
+  .chart-pie {
+    position: relative;
+    display: inline-block;
+    height: $radius;
+    width: $radius;
+    border-radius: 50%;
+    background-color: $circle-gray;
+    vertical-align: middle;
+     
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: $radius - $width;
+      width: $radius - $width;
+      top: $width / 2;
+      left: $width / 2;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  }
+  .chart-pie-count {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 44px;
+    color: $header-black;
+    text-align: center;
+    z-index: 1;
+  }
+  .chart-pie > div {
+    clip: rect(0, $radius, $radius, $radius / 2);
+  }
+  .chart-pie > div,
+  .chart-pie.over50 .first-fill {
+    position: absolute;
+    height: $radius;
+    width: $radius;
+    border-radius: 50%;
+  }
+  .chart-pie.over50 > div {
+    clip: rect(auto,auto,auto,auto);
+  }
+  .chart-pie.over50 .first-fill {
+    clip: rect(0, $radius, $radius, $radius / 2);
+  }
+  .chart-pie:not(.over50) .first-fill {
+      display: none;
+  }
+  .second-fill {
+    position: absolute;
+    clip: rect(0, $radius / 2, $radius, 0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-width: $width - 1;
+    border-style: solid;
+    box-sizing: border-box;
+  }
+  .chart-pie.positive {
+    .first-fill {
+      background-color: $positive-circle;
+    }
+    .second-fill {
+      border-color: $positive-circle;
+    }
+  }
+  .chart-pie.negative {
+    .first-fill {
+      background-color: $negative-circle;
+    }
+    .second-fill {
+      border-color: $negative-circle;
+    }
+  }
+}
+
+#aspect-content {
+  margin: 9% 0 0;
+ 
+}
+.aspect-tab {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 10px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 8px 8px 12px 0 rgb(0 0 0 / 4%);
+  opacity: 1;
+  transition: all 200ms ease-in;
+  border-left: 8px solid #bcff80;
+  
+}
+.aspect-tab:hover{
+    z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.01);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.01);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.01);
+  transition: all 200ms ease-in;
+  transform: scale(1.01);
+}
+.aspect-input {
+  display: none;
+}
+.aspect-input:checked ~ .aspect-content + .aspect-tab-content {
+  max-height: 3000px;
+}
+.aspect-input:checked ~ .aspect-content:after {
+    transform: rotate(0);
+}
+.aspect-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  max-height: 80px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+.aspect-label:hover{
+    color: whitesmoke;
+    transition: 0.5s;
+    background-color: rgb(194, 255, 145);
+    border-radius: 0 4px 4px 0;
+    opacity: 0.3;
+    
+}
+.aspect-content {
+  position: relative;
+  display: block;
+  
+  margin: 0;
+  padding: 0 87px 0 30px;
+  font-size: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  color: gray;
+  transition: 0.5s;
+}
+.aspect-content:hover{
+    color: whitesmoke;
+    transition: 0.5s;
+    background-color:#bcff80 ;
+    
+}
+
+.aspect-name {
+  display: inline-block;
+  width: 75%;
+  margin-left: 16px;
+  font-weight: 500;
+  white-space: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+.category{
+  margin-left: 35px;
+  text-align: justify;
+  font-size: 15px;
+}
+
+.categories{
+    padding: 0;
+  width: auto;
+  height: auto;
+}
+
+.all-opinions,
+.aspect-name {
+  font-size: 24px;
+  line-height: 22px;
+  font-weight: 900;
+}
+
+.aspect-content + .aspect-tab-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s;
+}
+
+.aspect-content > div {
+  vertical-align: middle;
+}
+
+
+
+
+.aspect-info {
+  width: 100%;
+  white-space: nowrap;
+  font-size: 0;
+ 
+}
+@include chart(44px, 4px);
+.aspect-tab-content {
+  font-size: 0;
+  text-align: justify;
+}
+.sentiment-wrapper {
+  padding: 24px 30px 30px;
+}
+.sentiment-wrapper > div {
+    height: 100%;
+  display: inline-block;
+  width: 33.3%;
+  max-width: 390px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  vertical-align: top;
+  cursor: default;
+}
+.sentiment-wrapper > div > div {
+  width: 100%;
+  min-height: 300px;
+  padding: 16px 24px 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  text-align: left;
+}
+.opinion-header {
+  position: relative;
+  width: 100%;
+  margin: 0 0 24px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+.opinion-header > span:nth-child(2) {
+  position: absolute;
+  right: 0;
+}
+.opinion-header + div > span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+@media screen and (max-width: 800px) {
+  .aspect-label {
+    max-height: 102px;
+  }
+  .aspect-content {
+    height: auto;
+    padding: 10px 0px 10px 10px;
+ 
+  }
+  .aspect-content > div {
+    display: block;
+    width: 100%;
+  }
+ 
+}
+@media screen and (max-width: 750px) {
+  .sentiment-wrapper > div {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+  .sentiment-wrapper > div:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .aspect-label {
+    max-height: 140px;
+  }
+ 
+  .all-opinions {
+    margin-bottom: 10px;
+  }
+  .all-opinions + div > span:first-child {
+    margin: 0;
+  }
+  #footer .copyrights{
+      padding: 10px 60px;
+      margin: 0 auto;
+      
+  }
+  #footer{
+      padding-top: 10px ;
+
+  }
+}
+
+input[type=text] {
+    width: 168px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    font-size: 16px;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  input[type=text]:focus {
+    width: 100%;
+  }
+/*******************************************/
+:root {
+	font-size: calc(16px + (24 - 16)*(100vw - 320px)/(1920 - 320));
+}
+button, input {
+	font-family: Hind, sans-serif;
+	line-height: 1.5em;
+}
+input {
+	color: #171717;
+}
+.search-bar {
+	display: flex;
+}
+
+.search-bar input,
+.search-btn, 
+.search-btn:before, 
+.search-btn:after {
+	transition: all 0.25s ease-out;
+}
+.search-bar input,
+.search-btn {
+	width: 3em;
+	height: 3em;
+}
+.search-bar input:invalid:not(:focus),
+.search-btn {
+	cursor: pointer;
+}
+.search-bar,
+.search-bar input:focus,
+.search-bar input:valid  {
+	width: 100%;
+}
+.search-bar input:focus,
+.search-bar input:not(:focus) + .search-btn:focus {
+	outline: transparent;
+}
+.search-bar {
+	margin: 15px auto;
+	padding: 0;
+	justify-content: center;
+	max-width: 170px;
+}
+.search-bar input {
+	background: transparent;
+	border-radius: 1.5em;
+	box-shadow: 0 0 0 0.4em #171717 inset;
+	padding: 0.75em;
+	transform: translate(0.5em,0.5em) scale(0.5);
+	transform-origin: 100% 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.search-bar input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.search-bar input:focus,
+.search-bar input:valid {
+	background: transparent;
+	border-radius: 0.375em 0 0 0.375em;
+	box-shadow: 0 0 0 0.1px #fff inset;
+	transform: scale(1);
+    border: 2px solid #bcff80;
+}
+.search-btn {
+	background: #171717;
+	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+	padding: 0.75em;
+	position: relative;
+	transform: translate(0.25em,0.25em) rotate(45deg) scale(0.25,0.125);
+	transform-origin: 0 50%;
+}
+.search-btn:before, 
+.search-btn:after {
+	content: "";
+	display: block;
+	opacity: 0;
+	position: absolute;
+}
+.search-btn:before {
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.2em black inset;
+	top: 0.75em;
+	left: 0.4em;
+	width: 1.2em;
+	height: 1.2em;
+    color: black;
+}
+.search-btn:after {
+	background: black;
+	border-radius: 0 0.25em 0.25em 0;
+	top: 60%;
+	left: 46%;
+	width: 0.75em;
+	height: 0.25em;
+	transform: translate(0.2em,0) rotate(45deg);
+	transform-origin: 0 50%;
+}
+.search-btn span {
+	display: inline-block;
+	overflow: hidden;
+	width: 1px;
+	height: 1px;
+}
+
+/* Active state */
+.search-bar input:focus + .search-btn,
+.search-bar input:valid + .search-btn {
+	background: transparent;
+	border-radius: 0 0.375em 0.375em 0;
+	transform: scale(1);
+    border: 2px solid #bcff80;
+}
+.search-bar input:focus + .search-btn:before, 
+.search-bar input:focus + .search-btn:after,
+.search-bar input:valid + .search-btn:before, 
+.search-bar input:valid + .search-btn:after {
+	opacity: 1;
+}
+.search-bar input:focus + .search-btn:hover,
+.search-bar input:valid + .search-btn:hover,
+.search-bar input:valid:not(:focus) + .search-btn:focus {
+	background: #bcff80;
+}
+.search-bar input:focus + .search-btn:active,
+.search-bar input:valid + .search-btn:active {
+	transform: translateY(1px);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	input {
+		color: #f1f1f1;
+       
+	}
+	
+	.search-bar input {
+		box-shadow: 0 0 0 0.4em #f1f1f1 inset;
+	}
+	.search-bar input:focus,
+	.search-bar input:valid {
+		background: #3d3d3d;
+		box-shadow: 0 0 0 0.1em #3d3d3d inset;
+	}
+	.search-btn {
+		background: #f1f1f1;
+	}
+}
+  
+
+  
+</style>
+</head>
+
+
+<body>
+    
+    <!-- Header -->
+ 
+     
+  
+           <nav class="container navbar sidebar-nav" id="header" >
+               <a href="/index.html" class="nav-brand text-dark">
+                365 Receitas
+            </a>
+            
+            <!-- toggle button -->
+            <button class="toggle-button">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+            
+            <!-- collapse on toggle button click -->
+            <div class="collapse">
+                <ul class="navbar-nav categories margin46">
+                    
+                    <li>
+                        <form action="" class="search-bar">
+                            <input id="pesquisa" type="search" name="search" pattern=".*\S.*" required>
+                            <button class="search-btn" type="submit">
+                                <span>Search</span>
+                            </button>
+                        </form>
+                        <ul class="item-ul" id="lista">
+                        </ul>  
+                    </li>
+                    
+                        <li><a href="#" class="d-flex justify-content-between text-dark nav-link">
+                          Café da Manhã
+                        </a>
+                    </li>
+                        <li> <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Almoço e Jantar
+                        </a>
+                    </li>
+                        <li><a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Sopas | Cremes | Patês
+                        </a>
+                    </li>
+                        <li>  <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Molhos
+                        </a>
+                    </li>
+                    </li>
+                        <li>  <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Carnes
+                           
+                        </a>
+                    </li>
+                    </li>
+                        <li>  <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Assados
+                        </a>
+                    </li>
+                    </li>
+                        <li>  <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Air Fryer
+                        </a>
+                    </li>
+                    </li>
+                        <li>  <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Sobremesas
+                        </a>
+                    </li>
+                    </li>
+                        <li>  <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Saladas
+                        </a>
+                    </li>
+                    </li>
+                        <li>  <a href="#" class="d-flex justify-content-between text-dark nav-link">
+                            Bônus | Sucos | Chás
+                        </a>
+                    </li>
+
+                   
+
+                    </ul>
+                    
+                </div>
+               
+
+                 
+                 
+           </nav>
+           
+      
+
+    <!-- .Header -->
+
+            <!-- Post Content -->
+                <section class="container" id="site-main" style="margin-right: inherit;"> 
+                    <div class="layout-2 row">
+                        <div class="col-8">
+                            <article id="post">
+                                <!-- article heading -->
+                                <div class="headings text-center margin74">
+                                    <div class="category">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+                                            printer took a galley of type and scrambled it to make a type specimen book. It has survived not 
+                                            only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                            
+                                    </div>
+                                </div>
+
+
+                                
+                        <div id="aspect-content">
+                            <div id="conteudo">
+
+                                <ul style="padding: 1px;">
+
+                                    <li>
+                                        <div class="aspect-tab" id="accordion">
+                                            <!--esse item1 é oq determina a ligação do titulo com o box que vai abrir-->
+                                        <input id="item-1" type="checkbox" class="aspect-input" name="aspect" >
+                                        <label for="item-1" class="aspect-label"></label>
+                                        <div class="aspect-content">
+                                            <div id="Doce" class="aspect-info">
+                                                
+                                                <h1  class="aspect-name">Doce</h1>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="aspect-tab-content">
+                                            <section class="categories">
+                                                <img src="./assets/img4.jpg" class="thumbnail2" alt="">
+                                            </section>
+
+                                            <div class="sentiment-wrapper">
+                                                <div>
+                                                    <div>
+                                                        <div class="positive-count opinion-header">
+                                                            Ingredientes
+                                                        </div>
+                                                        <div class="ingrediente">
+                                                            <span>
+                                                            <ul>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                            </ul>
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="neutral-count opinion-header">
+                                                            Modo de Preparo
+                                                        </div>
+                                                        <div class="preparo">
+                                                            <span>
+                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem minus molestias facere est pariatur vel reprehenderit suscipit magnam cumque modi sed, vitae ut ipsa qui, corrupti rem mollitia doloremque! Sint?
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="negative-count opinion-header ">
+                                                            Observações
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                                Proin id congue dolor. Vivamus eleifend vitae nunc sed
+                                                                 tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="aspect-tab ">
+                                            <!--esse item2 é oq determina a ligação do titulo com o box que vai abrir-->
+                                        <input id="item-2" type="checkbox" class="aspect-input" name="aspect">
+                                        <label for="item-2" class="aspect-label"></label>
+                                        <div class="aspect-content">
+                                            <div id="Pastel" class="aspect-info">
+                                                
+                                                <h1  class="aspect-name">Pastel</h1>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="aspect-tab-content">
+                                            <section class="categories">
+                                                <img src="./assets/img4.jpg" class="thumbnail2" alt="">
+                                            </section>
+                                            <div class="sentiment-wrapper">
+                                                <div>
+                                                    <div>
+                                                        <div class="positive-count opinion-header">
+                                                        Ingredientes
+                                                        </div>
+                                                        <div class="ingrediente">
+                                                            <span>
+                                                            <ul>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                            </ul>
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="neutral-count opinion-header">
+                                                        Modo de Preparo
+                                                        </div>
+                                                        <div class="preparo">
+                                                            <span>
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus enim repellendus voluptatem officiis voluptate aliquid, omnis voluptatibus architecto nam illum natus aperiam illo numquam vel at nesciunt aut ipsa mollitia?
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="negative-count opinion-header ">
+                                                            Observações
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                                Proin id congue dolor. Vivamus eleifend vitae nunc sed
+                                                                 tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </li>
+
+
+                                     <li>
+                                        <div class="aspect-tab ">
+                                            <!--esse item3 é oq determina a ligação do titulo com o box que vai abrir-->
+                                        <input id="item-3" type="checkbox" class="aspect-input" name="aspect">
+                                        <label for="item-3" class="aspect-label"></label>
+                                        <div id="Torta" class="aspect-content">
+                                            
+                                                <h1 class="aspect-name">Torta</h1>
+                                            
+                                            
+                                        </div>
+                                        <div class="aspect-tab-content">
+                                            <section class="categories">
+                                                <img src="./assets/img4.jpg" class="thumbnail2" alt="">
+                                            </section>
+                                            <div class="sentiment-wrapper">
+                                                <div>
+                                                    <div>
+                                                        <div class="positive-count opinion-header">
+                                                        Ingredientes
+                                                        </div>
+                                                        <div class="ingrediente">
+                                                            <span>
+                                                            <ul>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                            </ul>
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="neutral-count opinion-header">
+                                                        Modo de Preparo
+                                                        </div>
+                                                        <div class="preparo">
+                                                            <span>
+                                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod sint cumque doloribus quaerat amet dicta itaque, rerum voluptatem repellendus tenetur libero asperiores repellat! Delectus reiciendis asperiores voluptate, qui ab dignissimos?
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="negative-count opinion-header ">
+                                                            Observações
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                                Proin id congue dolor. Vivamus eleifend vitae nunc sed
+                                                                 tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <div class="aspect-tab ">
+                                            <!--esse item4 é oq determina a ligação do titulo com o box que vai abrir-->
+                                            <input id="item-4" type="checkbox" class="aspect-input" name="aspect">
+                                            <label for="item-4" class="aspect-label"></label>
+                                            <div id="Lasanha" class="aspect-content">
+                                                
+                                                    <h1 class="aspect-name">Lasanha</h1>
+                                                
+                                                
+                                            </div>
+                                            <div class="aspect-tab-content">
+                                                <section class="categories">
+                                                    <img src="./assets/img4.jpg" class="thumbnail2" alt="">
+                                                </section>
+                                            <div class="sentiment-wrapper">
+                                                <div>
+                                                    <div>
+                                                        <div class="positive-count opinion-header">
+                                                            Ingredientes
+                                                        </div>
+                                                        <div class="ingrediente">
+                                                            <span>
+                                                            <ul>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                            </ul>
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="neutral-count opinion-header">
+                                                            Modo de Preparo
+                                                        </div>
+                                                        <div class="preparo">
+                                                            <span>
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus enim repellendus voluptatem officiis voluptate aliquid, omnis voluptatibus architecto nam illum natus aperiam illo numquam vel at nesciunt aut ipsa mollitia?
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="negative-count opinion-header ">
+                                                            Observações
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                                Proin id congue dolor. Vivamus eleifend vitae nunc sed
+                                                                 tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <div class="aspect-tab ">
+                                            <!--esse item5 é oq determina a ligação do titulo com o box que vai abrir-->
+                                            <input id="item-5" type="checkbox" class="aspect-input" name="aspect">
+                                            <label for="item-5" class="aspect-label"></label>
+                                            <div id="frango assado" class="aspect-content">
+                                                
+                                                    <h1 class="aspect-name">Frango Assado</h1>
+                                                
+                                                
+                                            </div>
+                                            <div class="aspect-tab-content">
+                                                <section class="categories">
+                                                    <img src="./assets/img4.jpg" class="thumbnail2" alt="">
+                                                </section>
+                                            <div class="sentiment-wrapper">
+                                                <div>
+                                                    <div>
+                                                        <div class="positive-count opinion-header">
+                                                            Ingredientes
+                                                        </div>
+                                                        <div class="ingrediente">
+                                                            <span>
+                                                            <ul>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                            </ul>
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="neutral-count opinion-header">
+                                                            Modo de Preparo
+                                                        </div>
+                                                        <div class="preparo">
+                                                            <span>
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus enim repellendus voluptatem officiis voluptate aliquid, omnis voluptatibus architecto nam illum natus aperiam illo numquam vel at nesciunt aut ipsa mollitia?
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="negative-count opinion-header ">
+                                                            Observações
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                                Proin id congue dolor. Vivamus eleifend vitae nunc sed
+                                                                 tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                   
+                                    <li>
+                                        <div class="aspect-tab ">
+                                            <!--esse item6 é oq determina a ligação do titulo com o box que vai abrir-->
+                                            <input id="item-6" type="checkbox" class="aspect-input" name="aspect">
+                                            <label for="item-6" class="aspect-label"></label>
+                                            <div id="bolo de cenoura" class="aspect-content">
+                                                
+                                                    <h1 class="aspect-name">Bolo de Cenoura</h1>
+                                                
+                                                
+                                            </div>
+                                            <div class="aspect-tab-content">
+                                                <section class="categories">
+                                                    <img src="./assets/img4.jpg" class="thumbnail2" alt="">
+                                                </section>
+                                            <div class="sentiment-wrapper">
+                                                <div>
+                                                    <div>
+                                                        <div class="positive-count opinion-header">
+                                                            Ingredientes
+                                                        </div>
+                                                        <div class="ingrediente">
+                                                            <span>
+                                                            <ul>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                                <li>Ingrediente</li>
+                                                            </ul>
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="neutral-count opinion-header">
+                                                            Modo de Preparo
+                                                        </div>
+                                                        <div class="preparo">
+                                                            <span>
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus enim repellendus voluptatem officiis voluptate aliquid, omnis voluptatibus architecto nam illum natus aperiam illo numquam vel at nesciunt aut ipsa mollitia?
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="negative-count opinion-header ">
+                                                            Observações
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                                Proin id congue dolor. Vivamus eleifend vitae nunc sed
+                                                                 tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li>
+                                        <div class="aspect-tab ">
+                                            <!--esse item7 é oq determina a ligação do titulo com o box que vai abrir-->
+                                            <input id="item-7" type="checkbox" class="aspect-input" name="aspect">
+                                            <label for="item-7" class="aspect-label"></label>
+                                            <div class="aspect-content">
+                                                
+                                                    <h1 class="aspect-name">Lorem</h1>
+                                                
+                                                
+                                            </div>
+                                            <div class="aspect-tab-content">
+                                                <section class="categories">
+                                                    <img src="./assets/img4.jpg" class="thumbnail2" alt="">
+                                                </section>
+                                            <div class="sentiment-wrapper">
+                                                <div>
+                                                    <div>
+                                                        <div class="positive-count opinion-header">
+                                                            Ingredientes
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id congue dolor. Vivamus eleifend vitae nunc sed tincidunt.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="neutral-count opinion-header">
+                                                            Modo de Preparo
+                                                        </div>
+                                                        <div class="preparo">
+                                                            <span>
+                                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus enim repellendus voluptatem officiis voluptate aliquid, omnis voluptatibus architecto nam illum natus aperiam illo numquam vel at nesciunt aut ipsa mollitia?
+                                                             </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <div class="negative-count opinion-header ">
+                                                            Observações
+                                                        </div>
+                                                        <div>
+                                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                                                Proin id congue dolor. Vivamus eleifend vitae nunc sed
+                                                                 tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                 </ul>
+                            </div>
+                        </div>
+                                  
+                                <!-- thumbnail  -->
+                                
+        
+                            <!-- post footer -->
+                            <div class="post-footer mb-3"></div>
+                            <!-- .post footer -->
+                        </div>
+                        <div class="col-4 margin9" >
+                            <aside id="sidebar" class="px-1">
+
+                                <!-- categories -->
+                                <section class="categories">
+
+                                    <img src="./assets/img4.jpg" class="thumbnail" alt="">
+
+                                    
+                                </section>
+
+
+                            </aside>
+                        </div>
+                    </div>
+
+
+                </section>
+            <!-- .Post Content -->
+
+    <!-- .Main Site -->
+       
+    <!-- footer -->
+       <footer id="footer">
+           <div class="container">
+                             
+               <div class="copyrights">
+                   <p class="text-center text-secondary display-2">
+                        © 2021 <a href="#" class="text-primary">Lorem</a> - 365 Receitas Fitness. |  Versão 0.1.5.2
+                   </p>
+               </div>
+           </div>
+       </footer>
+    <!-- .footer -->
+
+    <!--scripts-->
+    <script>
+        receitas = ["Doce", "Pastel", "Torta", "Lasanha", "frango assado", "bolo de cenoura", "robalo em crosta com castanha do brasil"];
+        t = ""
+        for (i in receitas) {
+
+            t += "<li style='display:none;' class='item-li'><a href='#" + receitas[i] + "'>" + receitas[i] + "</a></li>"
+            receitas[i] = receitas[i].toLowerCase()
+        }
+        lista.innerHTML = t
+
+        pesquisa.onkeyup = function (e) {
+            t = this.value
+
+            r = new RegExp(t, "g")
+            
+            for (i in receitas) {
+                if(document.getElementById("pesquisa").value == ""){
+                    lista.children[i].style.display = "none";
+                }
+                else if (receitas[i].match(r)) {
+                    lista.children[i].removeAttribute("style")
+                }
+                else {
+                    lista.children[i].style.display = "none"
+                }
+
+            }
+
+        }
+
+       
+    </script>
+
+
+    <!-- masonry libray for horizontal grid -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
+        integrity="sha512-JRlcvSZAXT8+5SQQAvklXGJuxXTouyq8oIMaYERZQasB8SBDHZaUbeASsJWpk0UUrf89DP3/aefPPrlMR1h1yQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- swiper slider cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.5/swiper-bundle.min.js"
+        integrity="sha512-1LlEYE0qExJ/GUfAJ0k2K2fB5sIvMv/q6ueo3syohvQ3ElWDQVSMUOf39cxaDWHtNu7M6lF6ZC1H6A1m3SvheA=="
+        crossorigin="anonymous"></script>
+
+    <!-- custom javascript main.js file -->
+    <script>
+        let toggle = document.querySelector("#header .toggle-button");
+        let collapse = document.querySelectorAll("#header .collapse");
+
+        toggle.addEventListener('click', function () {
+            collapse.forEach(col => col.classList.toggle("collapse-toggle"));
+        })
+
+        // with masonry
+        new Masonry("#posts .grid", {
+            itemSelector: '.grid-item',
+            gutter: 20
+        });
+
+        // swiper libray initialization
+        new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 5,
+            autoplay: {
+                delay: 3000
+            },
+            // responsive brakpoints
+            breakpoints: {
+                '@0': {
+                    slidesPerView: 2
+                },
+                // 888px
+                '@1.00': {
+                    slidesPerView: 3
+                },
+                // 1110px
+                '@1.25': {
+                    slidesPerView: 4
+                },
+                // 1330px
+                '@1.50': {
+                    slidesPerView: 5
+                }
+            }
+        })
+
+        // Sticky Navigation
+        window.onscroll = function () { myFunction() };
+
+        // get the current value 
+        let navbar = document.getElementById("header");
+
+        // get the navbar position
+        let sticky = navbar.offsetTop;
+
+        // sticky function
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script>// updated 2019
+        const input = document.getElementById("search-input");
+        const searchBtn = document.getElementById("search-btn");
+        
+        const expand = () => {
+          searchBtn.classList.toggle("close");
+          input.classList.toggle("square");
+        };
+        
+        searchBtn.addEventListener("click", expand);
+        
+        
+        </script>
+ 
+</body>
+
+</html>
